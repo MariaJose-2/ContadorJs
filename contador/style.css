@@ -1,0 +1,8 @@
+/* Estilos para el encabezado principal (h1) y el valor del contador (h2) */
+h1{
+    text-align: center; /*alineacion den texto central*/
+    color: rgb(43, 168, 226); /*color del texto*/
+}
+h2{
+    color: rgb(172, 47, 255);/*color para el valor del contador*/
+}

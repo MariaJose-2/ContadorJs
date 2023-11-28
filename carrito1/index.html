@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Carrito</title>
+    <!-- enlaces a bibliotecas externas (Bootstrap y Font Awesome) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"/>
+    <!-- enlace al CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- encabezado principal -->
+    <h1 style="text-align:center;">Libros más vendidos</h1>
+    <div class="container">
+        <!-- Libro 1: No se como mostrarte donde me duele -->
+        <div class="producto">
+            <div class="imagen">
+                 <!-- imagen del libro -->
+                <img src="img/libro1.jpg" alt="Libro1">
+            </div>
+            <div class="datos">
+                <!-- informacion del libro -->
+                <h3>No se como mostrarte donde me duele</h3>
+                <p>Autor: Amalia Andrade</p>
+                <p>Precio: $48.300</p>
+                <!-- botones para ajustar la cantidad de libros -->
+                <div class="cantidad">
+                    <!-- boton de incrementar la cantidad "+" -->
+                    <button type="button" class="btn btn-outline-success" onclick="incrementarCantidad('Libro1')">
+                        +
+                    </button>
+                    <!-- muestra la cantidad de un libro especifico (en este caso, la "No se como mostrarte donde me duele") en el carrito de compras -->
+                    <span id="cantidadLibro1">0</span>
+                    <!-- boton de decrementar la cantidad "-" -->
+                    <button type="button" class="btn btn-outline-danger" onclick="decrementarCantidad('Libro1')">
+                        -
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- libro 2: Le dedico mi silencio -->
+        <div class="producto">
+            <div class="imagen">
+                <!-- imagen del libro -->
+                <img src="img/libro2.jpg" alt="Libro2">
+            </div>
+            <div class="datos">
+                <!-- informacion del libro -->
+                <h3>Le dedico mi silencio</h3>
+                <p>Autor: Mario Vargas Llosa</p>
+                <p>Precio: $44.800</p>
+                <!-- botones para ajustar la cantidad de libros -->
+                <div class="cantidad">
+                    <!-- boton de incrementar la cantidad "+" -->
+                    <button type="button" class="btn btn-outline-success" onclick="incrementarCantidad('Libro2')">
+                        +
+                    </button>
+                    <!-- muestra la cantidad de un libro especifico (en este caso, "le dedico mi silencio") en el carrito de compras -->
+                    <span id="cantidadLibro2">0</span>
+                    <!-- boton de decrementar la cantidad "-" -->
+                    <button type="button" class="btn btn-outline-danger" onclick="decrementarCantidad('Libro2')">
+                        -
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Libro 3: Maldita Roma -->
+        <div class="producto">
+            <div class="imagen">
+                <!-- imagen del libro -->
+                <img src="img/libro3.jpg" alt="Libro3">
+            </div>
+            <div class="datos">
+                <!-- informacion del libro -->
+                <h3>Maldita Roma</h3>
+                <p>Autor: Santiago Posteguillo</p>
+                <p>Precio: $64.400</p>
+                <!-- botones para ajustar la cantidad de libros -->
+                <div class="cantidad">
+                    <!-- boton de incrementar la cantidad "+" -->
+                    <button type="button" class="btn btn-outline-success" onclick="incrementarCantidad('Libro3')">
+                        +
+                    </button>
+                    <!-- muestra la cantidad de un producto especifico (en este caso, la "Computador") en el carrito de compras -->
+                    <span id="cantidadLibro3">0</span>
+                    <!-- boton de decrementar la cantidad "-" -->
+                    <button type="button" class="btn btn-outline-danger" onclick="decrementarCantidad('Libro3')">
+                        -
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- resumen del carrito -->
+        <div class="carrito">
+            <!-- titulo -->
+            <h2>Resumen del Carrito</h2>
+            <!-- lista no ordenada que almacenara los elementos del carrito -->
+            <ul id="resumenCarrito">
+                <!-- aqui se agregaran dinamicamente los elementos del carrito -->
+            </ul>
+             <!-- boton para generar el total de la compra -->
+            <button type="button" onclick="TotalCompra()" class="btn btn-primary">
+                Total de Compra
+            </button>
+        </div>
+<!-- fin del contenedor principal -->
+    </div>
+    <!-- enlace al archivo JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
