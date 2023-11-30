@@ -60,6 +60,18 @@ function actualizarResumenCarrito() {
 
     // itera sobre cada producto en el carrito y actualiza la interfaz
     for (const [libroNombre, info] of Object.entries(carrito)) {
+
+        // actualiza el elemento de cantidad en la interfaz
+        const cantidadElement = document.getElementById(`cantidad${libroNombre}`);
+        cantidadElement.textContent = info.cantidad;
+
+        // calcula el subtotal para el libro actual
+        const subtotal = info.cantidad * info.precio;
+
+        // actualiza el elemento de subtotal en la interfaz
+        const subtotalElement = document.getElementById(`subtotal${libroNombre}`);
+        subtotalElement.textContent = `$${subtotal}`;
+        
         // crea un nuevo elemento de lista (<li>) para cada producto
         const li = document.createElement("li");
         
